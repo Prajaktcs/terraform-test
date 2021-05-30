@@ -51,14 +51,14 @@ workflows:
   version: 2
   plan_approve_apply:
     jobs:
-      - init:
+      - init
       - plan:
           requires:
             - init
       - hold-apply:
           type: approval
           requires:
-            - plan-apply
+            - plan
       - apply:
           requires:
             - hold-apply
