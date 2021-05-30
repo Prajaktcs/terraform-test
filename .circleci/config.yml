@@ -10,9 +10,8 @@ jobs:
       - run:
           name: terraform init & plan
           command: |
-            ls
             cd dev && terraform init -input=false
-            cd dev && terraform plan -out tfapply
+            terraform plan -out tfapply
       - persist_to_workspace:
           root: .
           paths:
