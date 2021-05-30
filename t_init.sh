@@ -1,11 +1,11 @@
 # Initialize dev
-cd ~/dev && terraform init -input=false
+cd $1/dev && terraform init -input=false
 
 # initialize test
-cd ~/test && terraform init -input=false
+cd $1/test && terraform init -input=false
 
 # initialize prod
-cd ~/prod && terraform init -input=false
+cd $1/prod && terraform init -input=false
 
 # initialize global
-cd ~/global && terraform init -input=false
+cd $1/global && terraform init -input=false

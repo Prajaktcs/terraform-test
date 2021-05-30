@@ -10,8 +10,7 @@ jobs:
       - run:
           name: terraform init
           command: |
-            pwd
-            ./t_init.sh
+            ./t_init.sh /tmp/project
       - persist_to_workspace:
           root: .
           paths:
@@ -25,7 +24,7 @@ jobs:
       - run:
           name: terraform plan
           command: |
-            ./t_plan.sh
+            ./t_plan.sh /tmp/project
       - persist_to_workspace:
           root: .
           paths:
