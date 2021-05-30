@@ -10,7 +10,7 @@ jobs:
       - run:
           name: terraform init
           command: |
-            ls
+            pwd
             ./t_init.sh
       - persist_to_workspace:
           root: .
