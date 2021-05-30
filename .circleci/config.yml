@@ -24,6 +24,8 @@ jobs:
       - run:
           name: terraform plan
           command: |
+            pwd
+            ls
             ./t_plan.sh /tmp/project
       - persist_to_workspace:
           root: .
