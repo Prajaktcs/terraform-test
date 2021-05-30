@@ -16,12 +16,11 @@ jobs:
           paths:
             - .
   plan-apply:
-    working_directory: /tmp/project
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
     steps:
       - attach_workspace:
-        at: .
+          at: .
       - run:
           name: terraform plan
           command: |
